@@ -56,6 +56,28 @@ def questao_cinco():
     Crie uma função que recebe duas listas de palavras e retorna uma string onde as palavras das duas listas foram intercaladas.
     Se uma lista for maior que a outra, a função deve adicionar os elementos restantes ao final da string resultante.
     '''
+    lista_um = ["eu", "de", "café"]
+    lista_dois = ["gosto", "tomar", "da", "manhã"]
+    def intercalar_lista(lista_um, lista_dois):
+        i = 0
+        j = 0
+        lista_resultante = []
+        string_resultante = " "
+        while i < len(lista_um) and j < len(lista_dois):
+            lista_resultante.append(lista_um[i])
+            lista_resultante.append(lista_dois[j])
+            i += 1
+            j += 1
+        while i < len(lista_um):
+            lista_resultante.append(lista_um[i])
+            i += 1
+        while j < len(lista_dois):
+            lista_resultante.append(lista_dois[j])
+            j += 1
+        print(string_resultante.join(lista_resultante))
+    intercalar_lista(lista_um, lista_dois)
+questao_cinco()
+
 
 def questao_seis():
     '''
