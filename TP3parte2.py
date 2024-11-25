@@ -16,8 +16,8 @@ def questao_dois():
         texto = text.split()
         applying_filter = list(word for word in texto if word not in filtered_words)
         print(' '.join(applying_filter))
-    texto = "O jogo fechou sozinho. Talvez eu precise dar um upgrade no pc"
-    palavras_filtradas = ["sozinho", "eu", "um"]
+    texto = "O jogo fechou sozinho, talvez eu precise dar um upgrade no pc"
+    palavras_filtradas = ["pc", "eu", "um"]
     words_filter(texto, palavras_filtradas)
     
 def questao_tres():
@@ -76,8 +76,6 @@ def questao_cinco():
             j += 1
         print(string_resultante.join(lista_resultante))
     intercalar_lista(lista_um, lista_dois)
-questao_cinco()
-
 
 def questao_seis():
     '''
@@ -194,3 +192,17 @@ def questao_doze():
     Digitar "adicionar" seguido do índice e do nome do produto para adicionar o item na lista na posição indicada.
     A função deve atualizar a lista conforme as operações do usuário e exibi-la ao final.
     '''
+
+
+# O código abaixo foi produzido apenas para automatizar a execução de todas as funções, não necessariamente precisa ser utilizado.
+# Todos os códigos podem ser executados manualmente.
+
+def executando_todas_as_questoes():
+    for i in ("um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze"):
+        funcao = f"questao_{i}"
+        if funcao in globals():
+            print(f"-----EXECUTANDO FUNÇÃO {i.upper()}-----: "), globals()[funcao]()
+        else:
+            print(f"Função {funcao} não encontrada!")
+
+executando_todas_as_questoes()
